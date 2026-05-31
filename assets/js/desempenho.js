@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p class="elemento">Jogou: ${round.jogou}</p>
         <p class="elemento">Acertou: ${round.acerto}</p>
         <p class="elemento">Errou: ${round.errou}</p>
-        <button class="btnContagem" value="${round._id}">Mais Detalhes</button>
+        <button class="btnContagem" value="${round._id}" title="Mais detalhes">+</button>
       `
       resultadosSection.appendChild(rodadaDiv)
 

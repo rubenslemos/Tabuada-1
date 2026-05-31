@@ -1,5 +1,5 @@
 <header>
-  <nav id='topo'>
+  <nav id='topo' class='mobile-topbar'>
     <div class='mobile-menu'>
       <div class='line1'></div>
       <div class='line2'></div>
@@ -63,25 +63,56 @@
   </nav>
 </header>
 
-<section class='container'>
+<section class='container mobile-screen'>
   <h1>Qual o valor?</h1>
-  <section class='tabuada'>
+  <section class='tabuada chalk-board'>
+    <div class='flags-row'>
+        <span class='chalk-doodle'>2+2=4</span>
+        <span class='chalk-doodle'>7x3</span>
+        <span class='chalk-doodle'>9-5</span>
+        <span class='chalk-doodle'>6/2</span>
+        <span class='chalk-doodle'>x+y</span>
+      </div>
+    <img src='/img/estrela.png' alt='' class='side-sticker left-sticker' />
+    <img src='/img/calculadora.png' alt='' class='side-sticker right-sticker' />
     <div class='conta'>
-      <div class='conta' id='numerador'><span> &nbsp </span><p
-          class='numerador'
-        ></p></div>
-      <div class='conta' id='denominador'><span class='sinal'><i></i></span><p
-          class='denominador'
-        ></p></div>
-      <div class='resultado conta'><span> &nbsp </span><input
-          type='number'
-          id='resultado'
-        /></div>
+      <div class='chalk-decor'>
+        <span class='cd c1'>✦</span>
+        <span class='cd c2'>•</span>
+        <span class='cd c3'>□</span>
+        <span class='cd c4'>•</span>
+        <span class='cd c5'>△</span>
+        <span class='cd c6'>1+1</span>
+        <span class='cd c7'>3x3</span>
+      </div>
+      <div class='equation-row'>
+        <div id='numerador'><p class='numerador'></p></div>
+        <div class='op-wrap'><span class='sinal'><i></i></span></div>
+        <div id='denominador'><p class='denominador'></p></div>
+      </div>
+      <label for='resultado' class='answer-label'>Resposta</label>
+      <div class='resultado'>
+        <input type='number' id='resultado' />
+      </div>
     </div>
   </section>
-  <section class='btn'>
-    <button class='anterior'>Anterior</button>
-    <button class='resposta'>Resultado</button>
+  <section class='btn cards-row'>
+    <button class='anterior'>Finalizar</button>
+    <button class='resposta'>Verificar</button>
+  </section>
+  <section class='score-board-web'>
+    <div class='score-board-inner'>
+      <p class='jogou'>Jogos: 0</p>
+      <p class='acertou'>Acertos: 0</p>
+      <p class='errou'>Erros: 0</p>
+    </div>
+  </section>
+  <section class='footer-decor-web'>
+    <img src='/img/estrela.png' alt='' />
+    <img src='/img/check2.png' alt='' />
+    <img src='/img/calculadora.png' alt='' />
+    <img src='/img/redCross2.png' alt='' />
+    <img src='/img/enquete.png' alt='' />
   </section>
 </section>
 

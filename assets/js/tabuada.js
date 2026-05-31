@@ -28,9 +28,12 @@ criarTabuada = () => {
   const denominador = document.querySelector('.denominador')
   const sinal = document.querySelector('.sinal')
   const navList = document.querySelector('.nav-list')
-  const jogado = document.querySelector('.jogou')
-  const acertado = document.querySelector('.acertou')
-  const errado = document.querySelector('.errou')
+  const jogado = document.querySelector('.score-board-web .jogou')
+  const acertado = document.querySelector('.score-board-web .acertou')
+  const errado = document.querySelector('.score-board-web .errou')
+  const jogadoResumo = document.querySelector('.fim .jogou')
+  const acertadoResumo = document.querySelector('.fim .acertou')
+  const erradoResumo = document.querySelector('.fim .errou')
 
   let valor = 'soma'
 
@@ -385,9 +388,12 @@ criarTabuada = () => {
     localStorage.setItem('totalErros', totalErros)
     localStorage.setItem('totalJogos', totalJogos)
 
-    jogado.innerText = `Jogos: ${jogou}`
-    acertado.innerText = `Acertos: ${acerto}`
-    errado.innerText = `Erros: ${errou}`
+    if (jogado) jogado.innerText = `Jogos: ${jogou}`
+    if (acertado) acertado.innerText = `Acertos: ${acerto}`
+    if (errado) errado.innerText = `Erros: ${errou}`
+    if (jogadoResumo) jogadoResumo.innerText = `Jogos: ${jogou}`
+    if (acertadoResumo) acertadoResumo.innerText = `Acertos: ${acerto}`
+    if (erradoResumo) erradoResumo.innerText = `Erros: ${errou}`
 
     return { acerto, errou, jogou, totalJogos, totalAcertos, totalErros }
   }
