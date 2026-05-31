@@ -4064,7 +4064,7 @@ body,
   position: relative !important;
   left: 50% !important;
   transform: translate(-50%, -52px) !important;
-  max-height: calc(90vh - 4px) !important;
+  max-height: calc(100vh - 4px) !important;
   bottom: 90px !important;
 }
 
