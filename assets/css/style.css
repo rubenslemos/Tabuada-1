@@ -979,6 +979,7 @@ dialog {
   font-size: 13.5px;
   margin: 0 15px 15px 15px;
   color: lightcoral;
+  justify-content: flex-start;
 }
 
 .registrar {
@@ -3911,4 +3912,177 @@ body,
   z-index: 1;
   background: transparent !important;
   border: 0 !important;
+}
+
+/* ========================================
+   REGISTER SCREEN FIT (FULLY INSIDE VIEWPORT)
+   ======================================== */
+.mobile-screen .cadastro-container.chalk-auth {
+  width: min(96vw, 980px) !important;
+  max-height: calc(100vh - 88px - 14px) !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth > h1 {
+  flex: 0 0 auto;
+  margin-bottom: 6px !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario {
+  width: 100% !important;
+  flex: 1 1 auto;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-right: 8px !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario::-webkit-scrollbar-thumb {
+  background: rgba(186, 222, 206, 0.6);
+  border-radius: 8px;
+}
+
+.mobile-screen .cadastro-container.chalk-auth .cadastrar {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(21, 85, 63, 0) 0%, rgba(21, 85, 63, 0.9) 18%, rgba(21, 85, 63, 0.95) 100%);
+  padding-top: 8px;
+}
+
+@media (max-width: 1024px) {
+  .mobile-screen .cadastro-container.chalk-auth {
+    max-height: calc(100vh - 80px - 10px) !important;
+  }
+}
+
+/* ========================================
+   REGISTER HARD FIT FIX
+   ======================================== */
+.mobile-screen .cadastro-container.chalk-auth {
+  max-height: calc(100vh - 20px) !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth > h1 {
+  font-size: clamp(44px, 4.2vw, 78px) !important;
+  margin: 0 0 4px !important;
+  line-height: 1.05 !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario {
+  height: calc(100vh - 210px) !important;
+  max-height: calc(100vh - 210px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: 10px !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario p {
+  margin: 3px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario input,
+.mobile-screen .cadastro-container.chalk-auth #usuario select {
+  margin: 3px 0 6px !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth .ssenha {
+  font-size: 16px !important;
+  line-height: 1.15 !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth .cadastrar {
+  position: static !important;
+  padding-top: 6px !important;
+  margin-top: 4px !important;
+}
+
+@media (max-width: 1024px) {
+  .mobile-screen .cadastro-container.chalk-auth {
+    max-height: calc(100vh - 12px) !important;
+  }
+
+  .mobile-screen .cadastro-container.chalk-auth #usuario {
+    height: calc(100vh - 180px) !important;
+    max-height: calc(100vh - 180px) !important;
+  }
+}
+
+/* ========================================
+   REGISTER POSITION/CENTER FINAL FIX
+   ======================================== */
+.mobile-screen {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth {
+  width: min(96vw, 980px) !important;
+  margin: 0 auto !important;
+  transform: translateY(-26px) !important;
+  max-height: calc(100vh - 8px) !important;
+}
+
+.mobile-screen .cadastro-container.chalk-auth #usuario {
+  height: calc(100vh - 165px) !important;
+  max-height: calc(100vh - 165px) !important;
+}
+
+@media (max-width: 1024px) {
+  .mobile-screen .cadastro-container.chalk-auth {
+    transform: translateY(-14px) !important;
+    max-height: calc(100vh - 6px) !important;
+  }
+
+  .mobile-screen .cadastro-container.chalk-auth #usuario {
+    height: calc(100vh - 148px) !important;
+    max-height: calc(100vh - 148px) !important;
+  }
+}
+
+/* ========================================
+   REGISTER SCREEN ABSOLUTE POSITION FIX
+   ======================================== */
+.register-screen {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding-top: 0 !important;
+}
+
+.register-screen .cadastro-container.chalk-auth {
+  width: min(96vw, 980px) !important;
+  margin: 0 !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translate(-50%, -52px) !important;
+  max-height: calc(80vh - 4px) !important;
+  bottom: 90px !important;
+}
+
+.register-screen .cadastro-container.chalk-auth #usuario {
+  height: calc(100vh - 150px) !important;
+  max-height: calc(100vh - 150px) !important;
+  overflow-y: auto !important;
+}
+
+@media (max-width: 1024px) {
+  .register-screen .cadastro-container.chalk-auth {
+    left: 50% !important;
+    transform: translate(-50%, -28px) !important;
+    max-height: calc(100vh - 4px) !important;
+  }
+
+  .register-screen .cadastro-container.chalk-auth #usuario {
+    height: calc(100vh - 136px) !important;
+    max-height: calc(100vh - 136px) !important;
+  }
 }
